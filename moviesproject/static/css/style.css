@@ -1,0 +1,16 @@
+.container .jumbotron{
+  margin-top: 200px;
+
+background: orange;
+color: white;
+   font-family: 'Dancing Script', cursive;
+
+
+}
+
+table,tr,td,th,thead{
+  border: 2px solid white;
+  font-size: 30px;
+
+  
+}

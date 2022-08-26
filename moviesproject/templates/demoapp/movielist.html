@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/style.css" %}">
+  </head>
+<body>
+  <h1>Movies Information..</h1>
+
+  {%if mlist%}
+  <table border="1">
+    <thead>
+      <th>Released Date</th>
+      <th>movie Name</th>
+      <th>actor</th>
+      <th>actress</th>
+      <th>ratings</th>
+    </thead>
+    {% for i in mlist%}
+    <tr>
+      <td>{{i.rdate}}</td>
+      <td>{{i.mname}}</td>
+      <td>{{i.actor}}</td>
+      <td>{{i.actress}}</td>
+      <td>{{i.ratings}}</td>
+    </tr>
+    {%endfor%}
+  </table>
+  {%else%}
+  <h2>NO Movies Rocord Found!!</h2>
+  {%endif%}
+</body>
+</html>
